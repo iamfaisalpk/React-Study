@@ -1,4 +1,5 @@
 import State from "./components/Hooks";
+import Suii from "./components/Todo-list";
 import Using from "./components/UseReff";
 import Timer from "./components/UseReff";
 
@@ -32,8 +33,9 @@ const App = () => {
       {/* <Todos/> */}
       {/* <Props/> */}
       {/* <Use/> */}
-      <State/>
+      {/* <State/> */}
       {/* <Using/> */}
+      <Suii/>
     </>
   );
 };
