@@ -1,7 +1,5 @@
 import State from "./components/Hooks";
-import Suii from "./components/Todo-list";
-import Using from "./components/UseReff";
-import Timer from "./components/UseReff";
+import Changing from "./components/UseState";
 
 
 
@@ -35,7 +33,8 @@ const App = () => {
       {/* <Use/> */}
       {/* <State/> */}
       {/* <Using/> */}
-      <Suii/>
+      {/* <Suii/> */}
+      <Changing/>
     </>
   );
 };
