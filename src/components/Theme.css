@@ -1,0 +1,28 @@
+*{
+    padding: auto;
+    margin: auto;
+}
+
+.dark-theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    color: white;
+}
+.light-theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100vh;
+    color: black;
+}
+.switch-button{
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}

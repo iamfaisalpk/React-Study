@@ -1,8 +1,21 @@
-import React from "react";
+import { useState } from "react";
+import "./Theme.css";
 
-export default function Button({label}){
-    console.log(Button);
-    Event.target.innerText = "saved you";
+const  Theme= ()=> {
     
-    return <button onClick={()=> alert("your click me")}>{label}</button>
-}
+const [darkMode, setDarkMode] = useState(false);
+
+const toggleTheme = () => {
+    setDarkMode((prevMode) => !prevMode); 
+};
+
+return (
+    <div className={darkMode ? "dark-theme" : "light-theme"}>
+    <button onClick={toggleTheme} className="switch-button">
+        Switch Theme
+    </button>
+    </div>
+);
+};
+
+export default Theme;

@@ -1,5 +1,5 @@
-import State from "./components/Hooks";
-import Changing from "./components/UseState";
+import Theme from "./components/EventHandler";
+
 
 
 
@@ -18,7 +18,7 @@ const App = () => {
       <Todo myName="faisal" fn={getDay}/> */}
 
       
-      {/* <Button label={`click me`}/> */}
+      
       {/* <FocusInput/> */}
       {/* <Header/> */}
       {/* <Css/> */}
@@ -34,7 +34,8 @@ const App = () => {
       {/* <State/> */}
       {/* <Using/> */}
       {/* <Suii/> */}
-      <Changing/>
+      {/* <Changing/> */}
+      <Theme/>
     </>
   );
 };
