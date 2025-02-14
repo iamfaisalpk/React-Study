@@ -1,21 +1,18 @@
 import { useState } from "react";
 import "./Theme.css";
 
-const  Theme= ()=> {
-    
-const [darkMode, setDarkMode] = useState(false);
+const Theme = ()=>{
+    const [darkMode,setDarkMode] = useState(false);
 
-const toggleTheme = () => {
-    setDarkMode((prevMode) => !prevMode); 
-};
+    const toggleTheme =()=>{
+        setDarkMode((prev)=> !prev);
+    };
 
-return (
-    <div className={darkMode ? "dark-theme" : "light-theme"}>
-    <button onClick={toggleTheme} className="switch-button">
-        Switch Theme
-    </button>
-    </div>
-);
+    return (
+        <div className={darkMode ? "light-theme" : "dark-theme"}>
+            <button onClick={}>Switch theme</button>
+        </div>
+    )
 };
 
 export default Theme;

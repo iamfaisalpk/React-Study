@@ -1,4 +1,5 @@
-import Input from "./components/Use Effect";
+import Reve from "./components/Revie";
+import Display from "./components/Review";
 
 
 
@@ -12,6 +13,7 @@ const App = () => {
   // const getDay = (date) => {
   //   return Intl.DateTimeFormat("en-US", { weekday: "long" }).format(date);
   // };
+  // return <Display faisal="faizy"/>
   
   return (
   <>
@@ -38,7 +40,11 @@ const App = () => {
       {/* <Changing/> */}
       {/* <Theme/> */}
       {/* <Header/> */}
-      <Input/>
+      {/* <Input/> */}
+      {/* <Your/> */}
+      {/* <Reve/> */}
+      <Display name="faizy"/>
+      
     </>
   );
 };

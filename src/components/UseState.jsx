@@ -14,6 +14,8 @@
 
 // export default Use;
 
+            // use State Timer
+
 // import { useState } from "react";
 
 // const Changing = ()=>{
@@ -104,3 +106,42 @@
 // };
 
 // export default Input;
+
+import React, { useState } from 'react';
+
+const Your = () => {
+    const [count,setCount]=useState(0);
+    const [timing,setTiming]= useState(0);
+
+    const startTimer = ()=>{
+        if(!timing){
+            const timingid = setInterval (()=>{
+                setCount((prev)=> prev + 1);
+            },1000);
+            setTiming(timingid)
+        };
+    };
+
+    const stopTimer = ()=>{
+        if (timing){
+            clearInterval(timing);
+            setTiming(0);
+        };
+    };
+
+    const resetTimer = ()=>{
+        setCount(0)
+        stopTimer(0);
+    };
+
+return (
+    <>
+        <h1>Your Timer : {count}</h1>
+        <button onClick={startTimer}>Start</button>
+        <button onClick={stopTimer}>Stop</button>
+        <button onClick={resetTimer}>restart</button>
+    </>
+)
+}
+
+export default Your;
