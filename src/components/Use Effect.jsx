@@ -1,5 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 
+// import { useEffect } from "react"
+
 // function Example() {
 //     const [count, setCount] = useState(0);
     
@@ -25,23 +27,57 @@
 
 // aother method
 
-import React, {useState,useEffect} from "react";
+// import React, {useState,useEffect} from "react";
 
-const Test = ()=>{
+// const Test = ()=>{
     
+//     useEffect(()=>{
+//         console.log("re-render aayi kondirikkunnu");
+        
+//         return()=>{
+//             console.log("re-render");
+//         }
+//     },[]);
+
+//     return(
+//         <>
+//             <h1>Test Component</h1>
+//         </>
+//     )
+// };
+
+// export default Test;
+
+
+// cutome hook plus useEffect
+
+import React,{useState,useEffect} from "react";
+import { useForm } from "./Useform";
+
+const Input = ()=>{
+    const [value,setChanging]= useForm({
+        name : "your Name",
+        email : "email@gmail.com",
+        password : "!@123password",
+        cpassword : "!@123password"
+    });
+
     useEffect(()=>{
-        console.log("re-render aayi kondirikkunnu");
+        console.log("Running");
         
         return()=>{
-            console.log("re-render");
+            console.log("unMount is ready: okey")
         }
-    },[]);
+    },[value.name]) 
 
     return(
         <>
-            <h1>Test Component</h1>
+            <input type="text" name="name" value={value.name} onChange={setChanging}/><br /><br />
+            <input type="text" name="email" value={value.email} onChange={setChanging}/><br /><br />
+            <input type="text" name="password" value={value.password} onChange={setChanging}/><br /> <br />
+            <input type="text" name="cpassword" value={value.cpassword} onChange={setChanging}/>
         </>
     )
 };
 
-export default Test;
+export default Input;

@@ -1,4 +1,5 @@
-import Theme from "./components/EventHandler";
+import Input from "./components/Use Effect";
+
 
 
 
@@ -35,7 +36,9 @@ const App = () => {
       {/* <Using/> */}
       {/* <Suii/> */}
       {/* <Changing/> */}
-      <Theme/>
+      {/* <Theme/> */}
+      {/* <Header/> */}
+      <Input/>
     </>
   );
 };

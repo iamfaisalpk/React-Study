@@ -10,5 +10,5 @@ export  const useForm = (defualtValue)=>{
                 [event.target.name]:event.target.value,
             });
         },
-    ];
+    ]; 
 };
