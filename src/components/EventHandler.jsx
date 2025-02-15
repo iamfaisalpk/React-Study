@@ -10,7 +10,7 @@ const Theme = ()=>{
 
     return (
         <div className={darkMode ? "light-theme" : "dark-theme"}>
-            <button onClick={}>Switch theme</button>
+            <button onClick={toggleTheme}>Switch theme</button>
         </div>
     )
 };

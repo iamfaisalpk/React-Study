@@ -1,13 +1,3 @@
-// import React from "react";
-
-// const Prp =(props)=>{
-//     return(
-//         <h1>{props.faizy}</h1>
-//     );
-// };
-
-// export default Prp;
-
 import React,{useState} from "react";
 
 const Reve = ()=>{
