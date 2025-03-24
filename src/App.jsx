@@ -1,8 +1,4 @@
-import Reve from "./components/Revie";
-import Display from "./components/Review";
-
-
-
+import Your from "./components/UseState";
 
 
 
@@ -41,9 +37,9 @@ const App = () => {
       {/* <Theme/> */}
       {/* <Header/> */}
       {/* <Input/> */}
-      {/* <Your/> */}
+      <Your/>
       {/* <Reve/> */}
-      <Display name="faizy"/>
+      {/* <Display name="faizy"/> */}
       
     </>
   );

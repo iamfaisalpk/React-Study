@@ -106,41 +106,95 @@
 
 // export default Input;
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-const Your = () => {
-    const [count,setCount]=useState(0);
-    const [timing,setTiming]= useState(0);
+// const Your = () => {
+//     const [count,setCount]=useState(0);
+//     const [timing,setTiming]= useState(0);
 
-    const startTimer = ()=>{
-        if(!timing){
-            const timingid = setInterval (()=>{
-                setCount((prev)=> prev + 1);
-            },1000);
-            setTiming(timingid)
-        };
-    };
+//     const startTimer = ()=>{
+//         if(!timing){
+//             const timingid = setInterval (()=>{
+//                 setCount((prev)=> prev + 1);
+//             },1000);
+//             setTiming(timingid)
+//         };
+//     };
 
-    const stopTimer = ()=>{
-        if (timing){
-            clearInterval(timing);
-            setTiming(0);
-        };
-    };
+//     const stopTimer = ()=>{
+//         if (timing){
+//             clearInterval(timing);
+//             setTiming(0);
+//         };
+//     };
 
-    const resetTimer = ()=>{
-        setCount(0)
-        stopTimer(0);
-    };
+//     const resetTimer = ()=>{
+//         setCount(0)
+//         stopTimer(0);
+//     };
+
+// return (
+//     <>
+//         <h1>Your Timer : {count}</h1>
+//         <button onClick={startTimer}>Start</button>
+//         <button onClick={stopTimer}>Stop</button>
+//         <button onClick={resetTimer}>restart</button>
+//     </>
+// )
+// }
+
+// export default Your;
+
+
+// Timer
+
+import React, { useState } from "react";
+
+const Timer = () => {
+const [seconds, setSeconds] = useState(0);
+const [timing, setTiming] = useState(null);
+
+const startTimer = () => {
+    if (!timing) {
+    const timingId = setInterval(() => {
+        setSeconds((prev) => prev + 1);
+    }, 1000);
+    setTiming(timingId);
+    }
+};
+
+const stopTimer = () => {
+    if (timing) {
+    clearInterval(timing);
+    setTiming(null);
+    }
+};
+
+const resetTimer = () => {
+    setSeconds(0);
+    stopTimer();
+};
+
+    // Convert seconds into HH:MM:SS format
+const formatTime = (totalSeconds) => {
+    const hrs = Math.floor(totalSeconds / 3600);
+    const mins = Math.floor((totalSeconds % 3600) / 60);
+    const secs = totalSeconds % 60;
+
+    return `${hrs.toString().padStart(2, "0")}:${mins
+    .toString()
+    .padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+};
 
 return (
     <>
-        <h1>Your Timer : {count}</h1>
-        <button onClick={startTimer}>Start</button>
-        <button onClick={stopTimer}>Stop</button>
-        <button onClick={resetTimer}>restart</button>
+    <h1>{formatTime(seconds)}</h1>
+    <button onClick={startTimer}>Start</button>
+    <button onClick={stopTimer}>Stop</button>
+    <button onClick={resetTimer}>Reset</button>
     </>
-)
-}
+);
+};
 
-export default Your;
+export default Timer;
+
